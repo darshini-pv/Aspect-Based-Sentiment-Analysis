@@ -1,0 +1,17 @@
+# Raw datasets
+data/
+*.csv
+*.xml
+*.xsd
+
+# Model files
+models/
+*.pkl
+*.joblib
+
+# Python temporary files
+__pycache__/
+*.pyc
+
+# Spyder files
+.spyproject/

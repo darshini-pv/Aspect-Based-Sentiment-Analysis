@@ -1,0 +1,21 @@
+STAGE 2 DATA PREPARATION AND EDA SUMMARY
+==================================================
+Training records: 2358
+Unique sentence IDs: 1488
+Unique sentence texts: 1482
+Unique aspect terms: 1042
+Duplicate records: 0
+Missing values: 0
+Valid aspect spans: 2358
+Invalid aspect spans: 0
+Repeated sentence texts: 556
+Phase A and B identical: True
+
+SENTIMENT COUNTS:
+polarity
+positive    987
+negative    866
+neutral     460
+conflict     45
+
+STAGE 2 INSPECTION COMPLETED
