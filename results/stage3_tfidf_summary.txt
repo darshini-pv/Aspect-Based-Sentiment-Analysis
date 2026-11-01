@@ -1,0 +1,32 @@
+STAGE 3: TF-IDF FEATURE EXTRACTION
+==================================================
+
+Original records: 2358
+Training records: 1880
+Testing records: 478
+Training sentence IDs: 1190
+Testing sentence IDs: 298
+Overlapping IDs: 0
+Training matrix shape: (1880, 6146)
+Testing matrix shape: (478, 6146)
+Vocabulary size: 6146
+
+TF-IDF parameters:
+ngram_range = (1, 2)
+max_features = 10000
+min_df = 2
+stop_words = english
+
+Training sentiment distribution:
+polarity
+positive    809
+negative    679
+neutral     351
+conflict     41
+
+Testing sentiment distribution:
+polarity
+negative    187
+positive    178
+neutral     109
+conflict      4

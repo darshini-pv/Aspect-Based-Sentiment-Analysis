@@ -1,0 +1,23 @@
+STAGE 4: MODEL TRAINING SUMMARY
+==================================================
+
+Training records: 1880
+Testing records: 478
+TF-IDF features: 6146
+
+Model 1: Logistic Regression
+C = 1.0
+class_weight = balanced
+max_iter = 2000
+Training time = 0.3115 seconds
+Iterations = [59]
+
+Model 2: Linear SVM
+C = 1.0
+class_weight = balanced
+max_iter = 2000
+Training time = 0.0400 seconds
+Iterations = 119
+
+Sentiment classes:
+conflict, negative, neutral, positive

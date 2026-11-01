@@ -1,0 +1,15 @@
+STAGE 5.1: TRIAL DATASET AUDIT
+=================================================================
+
+Training dataset shape: (2358, 6)
+Trial dataset shape: (49, 6)
+
+Trial sentiment distribution:
+polarity
+positive    29
+negative    16
+neutral      4
+
+Overlapping sentence texts: 39
+Overlapping aspect-level records: 44
+Overlapping sentence IDs: 40

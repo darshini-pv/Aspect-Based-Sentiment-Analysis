@@ -1,0 +1,183 @@
+======================================================================
+STAGE 6: FINAL MODEL ERROR ANALYSIS
+======================================================================
+
+Selected Model: Baseline Linear SVM
+Dataset: SemEval-2014 Laptop ABSA
+Evaluation: Original held-out test set
+
+----------------------------------------------------------------------
+1. OVERALL PREDICTION SUMMARY
+----------------------------------------------------------------------
+Total test records: 478
+Correct predictions: 304
+Incorrect predictions: 174
+Accuracy: 0.6360
+Correct prediction percentage: 63.60%
+Incorrect prediction percentage: 36.40%
+
+----------------------------------------------------------------------
+2. CLASSIFICATION REPORT
+----------------------------------------------------------------------
+
+              precision    recall  f1-score   support
+
+    conflict       0.00      0.00      0.00         4
+    negative       0.65      0.70      0.67       187
+     neutral       0.55      0.34      0.42       109
+    positive       0.69      0.77      0.73       178
+
+    accuracy                           0.64       478
+   macro avg       0.47      0.45      0.46       478
+weighted avg       0.64      0.64      0.63       478
+
+----------------------------------------------------------------------
+3. CLASS-WISE ERROR SUMMARY
+----------------------------------------------------------------------
+
+Sentiment  Total_Records  Correct_Predictions  Incorrect_Predictions   Recall  Error_Rate_Percent
+ conflict              4                    0                      4 0.000000          100.000000
+ negative            187                  130                     57 0.695187           30.481283
+  neutral            109                   37                     72 0.339450           66.055046
+ positive            178                  137                     41 0.769663           23.033708
+
+----------------------------------------------------------------------
+4. COMMON SENTIMENT CONFUSION PATTERNS
+----------------------------------------------------------------------
+
+Actual_Sentiment Predicted_Sentiment  Number_of_Records
+         neutral            negative                 38
+         neutral            positive                 32
+        positive            negative                 29
+        negative            positive                 28
+        negative             neutral                 21
+        positive             neutral                  9
+        negative            conflict                  8
+        positive            conflict                  3
+        conflict            negative                  2
+        conflict            positive                  2
+         neutral            conflict                  2
+
+----------------------------------------------------------------------
+5. SAMPLE MISCLASSIFIED EXAMPLES
+----------------------------------------------------------------------
+
+
+Actual sentiment: CONFLICT
+
+Aspect: software
+Actual: conflict
+Predicted: negative
+Sentence: I bought it from HSN because it was "bundled" with extra software, but as it turns out, that software just crashes it more often.....
+
+Aspect: graphics
+Actual: conflict
+Predicted: positive
+Sentence: Just keep in mind the graphics is not dedicated so loading the movie almost took a minute, but it ran fairly smooth for a non-dedicated graphics card.
+
+Aspect: non-dedicated graphics card
+Actual: conflict
+Predicted: positive
+Sentence: Just keep in mind the graphics is not dedicated so loading the movie almost took a minute, but it ran fairly smooth for a non-dedicated graphics card.
+
+Aspect: keyboard
+Actual: conflict
+Predicted: negative
+Sentence: The keyboard, which generally felt okay even for someone used to a desktop keyboard, now looks terrible.
+
+Actual sentiment: NEGATIVE
+
+Aspect: Microsoft office for the mac
+Actual: negative
+Predicted: neutral
+Sentence: One suggestion I do have, is to not bother getting Microsoft office for the mac expecting it will work just like you knew it to on a PC.
+
+Aspect: warrenty
+Actual: negative
+Predicted: positive
+Sentence: Purchased a Toshiba Lap top it worked good until just after the warrenty went out.
+
+Aspect: representive at Microsoft
+Actual: negative
+Predicted: positive
+Sentence: Also, if you need to talk to a representive at Microsoft, there is a charge, which I believe is robbery, since you are charged enormous amounts for a very badly designed system, which most people would have went with XP if they could.
+
+Aspect: system
+Actual: negative
+Predicted: positive
+Sentence: Also, if you need to talk to a representive at Microsoft, there is a charge, which I believe is robbery, since you are charged enormous amounts for a very badly designed system, which most people would have went with XP if they could.
+
+Aspect: Resolution
+Actual: negative
+Predicted: positive
+Sentence: they improved nothing else such as Resolution, appearance, cooling system, graphics card, etc.
+
+Actual sentiment: NEUTRAL
+
+Aspect: software
+Actual: neutral
+Predicted: negative
+Sentence: When I finally had everything running with all my software installed I plugged in my droid to recharge and the system crashed.
+
+Aspect: motherboard
+Actual: neutral
+Predicted: negative
+Sentence: After about a week I finally got it back and was told that the motherboard had failed and so they installed a new motherboard.
+
+Aspect: use
+Actual: neutral
+Predicted: positive
+Sentence: It had a cooling system malfunction after 10 minutes of general use, and would not move past this error.
+
+Aspect: service department
+Actual: neutral
+Predicted: negative
+Sentence: I had purchased it from a major electronics store and took it to their service department to find out what the problem was.
+
+Aspect: graphic power
+Actual: neutral
+Predicted: positive
+Sentence: I need graphic power to run my Adobe Creative apps efficiently.
+
+Actual sentiment: POSITIVE
+
+Aspect: Drivers
+Actual: positive
+Predicted: negative
+Sentence: Drivers updated ok but the BIOS update froze the system up and the computer shut down.
+
+Aspect: external speaker
+Actual: positive
+Predicted: negative
+Sentence: I am using the external speaker- sound is good.
+
+Aspect: sound
+Actual: positive
+Predicted: negative
+Sentence: I am using the external speaker- sound is good.
+
+Aspect: system
+Actual: positive
+Predicted: neutral
+Sentence: If you really want a bang-up system and don't need to run Windows applications, go with an Apple;
+
+Aspect: XP
+Actual: positive
+Predicted: negative
+Sentence: It seems they could have updated XP and done without creating Vista.
+
+----------------------------------------------------------------------
+6. INTERPRETATION AND LIMITATIONS
+----------------------------------------------------------------------
+
+This analysis examines the errors made by the selected Baseline Linear SVM on the original held-out test set.
+
+Class-wise error statistics help identify which sentiment categories are more difficult for the model to classify.
+
+The conflict class has very few test examples. Its evaluation metrics should therefore be interpreted cautiously.
+
+Neutral sentiment may be confused with positive or negative sentiment when the review language contains mixed or subtle opinions.
+
+The project uses provided aspect terms. It classifies the sentiment associated with a given aspect; it does not independently extract aspect terms.
+
+This is an academic machine learning experiment and is not a clinically or commercially validated system.

@@ -1,0 +1,36 @@
+STAGE 5.2: FEATURE ENGINEERING AND HYPERPARAMETER TUNING
+=================================================================
+
+Original Stage 3 split verified.
+Training records: 1880
+Testing records: 478
+Overlapping sentence IDs: 0
+
+Grouped cross-validation: 3 folds
+Scoring metric: Macro-F1
+Stop words: None
+
+ALL CONFIGURATION RESULTS:
+
+N-gram Range    C Class Weight  Mean Macro-F1  Standard Deviation
+      (1, 1)  0.1     balanced       0.459489            0.041287
+      (1, 1)  1.0     balanced       0.456234            0.011413
+      (1, 2)  1.0     balanced       0.448176            0.020296
+      (1, 2)  0.1     balanced       0.443045            0.037741
+      (1, 2) 10.0     balanced       0.439543            0.035489
+      (1, 2) 10.0         None       0.435018            0.044804
+      (1, 1) 10.0     balanced       0.415268            0.023096
+      (1, 1)  1.0         None       0.404616            0.005833
+      (1, 2)  1.0         None       0.400172            0.012286
+      (1, 1) 10.0         None       0.391150            0.010053
+      (1, 1)  0.1         None       0.366958            0.011789
+      (1, 2)  0.1         None       0.358848            0.005274
+
+BEST CONFIGURATION:
+N-gram range: (1, 1)
+C: 0.1
+Class weight: balanced
+Mean CV Macro-F1: 0.4595
+Standard deviation: 0.0413
+
+Final tuned model saved successfully.

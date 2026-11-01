@@ -1,0 +1,13 @@
+Logistic Regression
+============================================================
+
+              precision    recall  f1-score   support
+
+    conflict       0.00      0.00      0.00         4
+    negative       0.66      0.65      0.65       187
+     neutral       0.51      0.37      0.43       109
+    positive       0.72      0.75      0.73       178
+
+    accuracy                           0.62       478
+   macro avg       0.47      0.44      0.45       478
+weighted avg       0.64      0.62      0.63       478

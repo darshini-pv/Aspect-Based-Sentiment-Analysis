@@ -1,0 +1,9 @@
+STAGE 5: MODEL PERFORMANCE COMPARISON
+=================================================================
+
+              Model  Accuracy  Macro Precision  Macro Recall  Macro F1  Weighted Precision  Weighted Recall  Weighted F1
+Logistic Regression  0.619247         0.471328      0.443047  0.454052            0.640385         0.619247     0.626891
+         Linear SVM  0.635983         0.473487      0.451075  0.455205            0.637861         0.635983     0.630035
+
+Primary evaluation metric: Macro F1-score
+Note: Conflict class performance is unstable because only four conflict examples occur in the test set.
